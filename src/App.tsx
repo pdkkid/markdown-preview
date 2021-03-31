@@ -1,23 +1,17 @@
 import React from "react";
-import {
-  CustomCover,
-  CustomSplit,
-  SourceLink,
-  StyledBar,
-  Title,
-} from "./App.styles";
+import { CustomCover, SourceLink, StyledBar, Title } from "./App.styles";
 import AppBoundry from "@bedrock-layout/appboundary";
-import { Markdown } from "./components/markdown";
-import { Editor } from "./components/editor";
+import { Editor, Markdown } from "./components";
+import Split from "@bedrock-layout/split";
 
 export const App = (): JSX.Element => {
   return (
     <CustomCover bottom={<BottomBar />}>
       <AppBoundry>
-        <CustomSplit gutter="md" fraction="1/2">
+        <Split gutter="md" fraction="1/2">
           <Editor />
           <Markdown />
-        </CustomSplit>
+        </Split>
       </AppBoundry>
     </CustomCover>
   );

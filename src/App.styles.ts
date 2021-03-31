@@ -1,11 +1,6 @@
-import Split from "@bedrock-layout/split";
 import InlineCluster from "@bedrock-layout/inline-cluster";
 import styled from "styled-components";
 import Cover from "@bedrock-layout/cover";
-
-export const CustomSplit = styled(Split)`
-  height: 100%;
-`;
 
 export const CustomCover = styled(Cover)`
   [data-bedrock-layout-cover-child] {

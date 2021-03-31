@@ -8,7 +8,6 @@ export const Editor = (): JSX.Element => {
 
   const onChange = (event: any) => {
     setInput(event.target.value);
-    console.log(input);
   };
 
   return (
