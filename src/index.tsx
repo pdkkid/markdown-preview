@@ -1,19 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { createGlobalStyle } from 'styled-components';
 import { App } from './App';
+
+const GlobalStyle = createGlobalStyle`
+  body {
+    margin: 0;
+  }
+`
 
 ReactDOM.render(
   <React.StrictMode>
-        <App />
-        <Source />
+    <GlobalStyle/>
+    <App/>
   </React.StrictMode>,
   document.getElementById('root')
 );
-
-function Source() {
-  return (
-    <div>
-      <a href="https://github.com/pdkkid/markdown-preview" target="_blank" rel="noreferrer noopener" >Source</a>
-    </div>
-  );
-}
