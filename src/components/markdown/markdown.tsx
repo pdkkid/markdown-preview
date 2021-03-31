@@ -1,7 +1,7 @@
 import Reel from "@bedrock-layout/reel";
 import styled from "styled-components";
 
-export const Formatted = (): JSX.Element => {
+export const Markdown = (): JSX.Element => {
     return(
         <Reel tabIndex={0}>
             This is formatted

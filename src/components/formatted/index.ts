@@ -1,1 +1,0 @@
-export { Formatted } from './formatted';

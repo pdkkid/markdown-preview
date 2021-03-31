@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { RecoilRoot } from 'recoil';
 import { createGlobalStyle } from 'styled-components';
 import { App } from './App';
 
@@ -11,8 +12,10 @@ const GlobalStyle = createGlobalStyle`
 
 ReactDOM.render(
   <React.StrictMode>
-    <GlobalStyle/>
-    <App/>
+    <RecoilRoot>
+      <GlobalStyle/>
+      <App/>
+    </RecoilRoot>
   </React.StrictMode>,
   document.getElementById('root')
 );
