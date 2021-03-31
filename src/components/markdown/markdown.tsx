@@ -1,10 +1,19 @@
-import Reel from "@bedrock-layout/reel";
-import styled from "styled-components";
+import React from "react";
+import ReactMarkdown from "react-markdown";
+import { useRecoilValue } from "recoil";
+import { InputAtom } from "../../state";
+import { CustomStack, StyledLabel } from "../styles";
 
 export const Markdown = (): JSX.Element => {
-    return(
-        <Reel tabIndex={0}>
-            This is formatted
-        </Reel>
-    );
-}
+    const FormattedInput  = () => {
+        const input = useRecoilValue(InputAtom);
+        return (<ReactMarkdown>{input}</ReactMarkdown>)
+    }
+    return (
+    <CustomStack>
+      <StyledLabel>Preview</StyledLabel>
+
+      <FormattedInput/>
+    </CustomStack>
+  );
+};

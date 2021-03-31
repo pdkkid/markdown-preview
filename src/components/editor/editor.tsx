@@ -1,24 +1,26 @@
-import Reel from "@bedrock-layout/reel";
 import { useRecoilState } from "recoil";
-import { EditorAtom } from "../../state";
-import styled from "styled-components";
+import { InputAtom } from "../../state";
+import React from "react";
+import { StyledTextArea, StyledLabel, CustomStack } from "../styles";
 
 export const Editor = (): JSX.Element => {
-    const [input, setInput] = useRecoilState(EditorAtom);
+  const [input, setInput] = useRecoilState(InputAtom);
 
-    const onChange = (event: any) => {
-        setInput(event.target.value);
-        console.log(input)
-    };
+  const onChange = (event: any) => {
+    setInput(event.target.value);
+    console.log(input);
+  };
 
-    return(
-        <Reel tabIndex={0}>
-            <textarea
-                id='editor'
-                itemType='text'
-                onChange={onChange}
-                value={input}
-            />
-        </Reel>
-    );
-}
+  return (
+    <CustomStack>
+      <StyledLabel>Editor</StyledLabel>
+      <StyledTextArea
+        id="editor"
+        itemType="text"
+        onChange={onChange}
+        value={input}
+        spellCheck={false}
+      />
+    </CustomStack>
+  );
+};
