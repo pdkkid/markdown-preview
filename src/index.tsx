@@ -7,6 +7,8 @@ import { App } from './App';
 const GlobalStyle = createGlobalStyle`
   body {
     margin: 0;
+    background: #95a5a6;
+    font-family: "Open Sans", sans-serif !important;
   }
 `
 

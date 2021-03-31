@@ -8,8 +8,6 @@ export const CustomSplit = styled(Split)`
 `;
 
 export const CustomCover = styled(Cover)`
-  background: #95a5a6;
-
   [data-bedrock-layout-cover-child] {
     align-self: auto;
   }
@@ -24,15 +22,15 @@ export const StyledBar = styled(InlineCluster)`
 
 export const Title = styled.span`
   color: #ecf0f1;
+  user-select: none;
   font-size: 1.25em;
   font-weight: 400;
 `;
 
 export const SourceLink = styled.a`
   user-select: none;
-  font-family: "Open Sans", sans-serif;
   font-size: 1em;
-  font-weight: 200;
+  font-weight: 400;
   justify-self: left;
   color: #ecf0f1;
   text-decoration: none;

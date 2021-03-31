@@ -2,6 +2,12 @@ import Stack from "@bedrock-layout/stack";
 import styled from "styled-components";
 
 export const StyledLabel = styled.label`
+    font-size: 2em;
+    text-decoration: underline;
+    font-weight: bold;
+    font-family: inherit;
+    color: #2c3e50;
+    padding-bottom: 20px;
     text-align: center;
 `;
 
@@ -17,8 +23,8 @@ export const StyledTextArea = styled.textarea`
   background: transparent;
   overflow-y: hidden;
   resize: none;
-  text-align-last: center;
-  color: #ecf0f1;
+  font-size: 1.25em;
+  color: #2c3e50;
 `;
 
 export const CustomStack = styled(Stack)`
